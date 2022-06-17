@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="{{url_for('home')}}static/css/style.css">
+    <title>Design Custom File Uploader | Brave Coder</title>
+    
+</head>
+<body>
+  <form action="/ocr/virement"  method="post"  enctype="multipart/form-data">
+    <div class="a" style="display: inline-block">
+      <h3>virement</h3>
+      <img src="static\virement.png" class="img">
+    <label for="file">
+        <div class="wrapper" style="display: inline-block">
+            
+            <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+            <input type="file" id="file" name="uploaded_file">
+            <p id="fileName"></p>
+            
+        </div>
+        <input type="submit" name="envoyer" class="btn">
+    </label>
+  </div>
+  <div class="a" style="display: inline-block">
+    <h3>bon de commande</h3>
+    <label for="ffile">
+        <div class="wrapper" style="display: inline-block">
+          
+          <i class="fa fa-cloud-upload" aria-hidden="true" ></i>
+          <input type="file" id="ffile">
+          <p id="ffileName"></p>
+      </div><input type="submit" name="envoyer" class="btn">
+    </label>
+  </div>
+</form>
+<form action="/budget/bud"  method="post"  enctype="multipart/form-data">
+
+  <div>
+    
+       <input type="file" id="ffilee" name="uploaded_file"></br>
+   
+       <input type="submit" name="envoyer" >
+  </div>
+
+
+
+
+</form>
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#file").on("change", function(){
+                $("#fileName").text($(this).val().match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1])
+            })
+        });
+    </script>
+</body>
+</html>

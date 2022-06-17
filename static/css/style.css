@@ -1,0 +1,273 @@
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Roboto, sans-serif;
+  background: #eceffc;
+}
+
+.upload {
+  --btn-color: #3bafda;
+  --progress-color: #2d334c;
+  --ease-in-out-quartic: cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 1.7px 1.4px rgba(0, 0, 0, 0.02), 0 4px 3.3px rgba(0, 0, 0, 0.028), 0 7.5px 6.3px rgba(0, 0, 0, 0.035), 0 13.4px 11.2px rgba(0, 0, 0, 0.042), 0 25.1px 20.9px rgba(0, 0, 0, 0.05), 0 60px 50px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transform: rotate(0);
+}
+.upload__info {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  margin-right: 40px;
+}
+.upload__filename {
+  padding-left: 8px;
+}
+.upload__button {
+  position: relative;
+  padding: 16px;
+  margin: 0;
+  font-size: 100%;
+  font-family: inherit;
+  color: white;
+  background: none;
+  border: none;
+  border-radius: inherit;
+  outline: none;
+  cursor: pointer;
+  transform: scale(0.9);
+}
+.upload__button::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--btn-color);
+  border-radius: inherit;
+  transform-origin: right;
+}
+.upload__hint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  transform: translateY(100%);
+}
+.upload__progress {
+  position: absolute;
+  content: "";
+  top: 90%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: var(--progress-color);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.upload__progress .check {
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  margin-right: 6px;
+}
+.upload.uploading .upload__button {
+  animation: expand 0.3s forwards;
+}
+.upload.uploading .upload__button::before {
+  animation: fill-left 1.2s 0.4s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploading .upload__info > *,
+.upload.uploading .upload__button__text {
+  animation: fade-up-out 0.4s 0.4s forwards;
+}
+.upload.uploading .upload__hint {
+  animation: fade-up-in 0.4s 0.8s forwards;
+}
+.upload.uploading .upload__progress {
+  animation: fill-right 2s 1s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploaded .upload__progress {
+  animation: slide-up 1s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploaded .upload__progress .check {
+  animation: stroke-in 0.6s 0.4s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploaded-after .upload__info {
+  animation: slide-down-info 1s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploaded-after .upload__button {
+  animation: slide-down-button 1s var(--ease-in-out-quartic) forwards;
+}
+.upload.uploaded-after .upload__progress {
+  animation: slide-down-progress 1s var(--ease-in-out-quartic) forwards;
+}
+
+@keyframes expand {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes fill-left {
+  to {
+    transform: scale(4, 1.2);
+  }
+}
+@keyframes fade-up-out {
+  to {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+}
+@keyframes fade-up-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fill-right {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes slide-up {
+  from {
+    transform: scaleX(1) translateY(0);
+  }
+  to {
+    transform: scaleX(1) translateY(-90%);
+  }
+}
+@keyframes stroke-in {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes slide-down-info {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-down-button {
+  from {
+    transform: scale(0.9) translateY(-100%);
+  }
+  to {
+    transform: scale(0.9) translateY(0);
+  }
+}
+@keyframes slide-down-progress {
+  from {
+    transform: scaleX(1) translateY(-90%);
+  }
+  to {
+    transform: scaleX(1) translateY(10%);
+  }
+} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #2ecc71;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to top, #4F6072, #8699AA);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+h3{
+  margin-top: 5px;
+  text-align: center;
+}
+.wrapper {
+  background-color: #FFFAFA;
+  border: 1px dashed #ccc;
+  border-radius: 10px;
+    padding-bottom: 40px;
+    padding-left: 130px;
+    padding-right: 130px;
+     font-size: 60px; 
+     /* display: flex;  */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--primary-color);
+    position: absolute;
+    bottom:180px;
+    margin-left: 100px;
+}
+
+.a {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin:50px;
+  width: 500px;
+  height: 500px;
+  background-color: #FFFAFA;
+}
+
+.wrapper p {
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper input[type="file"] {
+    display: none;
+}
+.btn {
+  padding: 10px;
+  color: white;
+  background-color: #009578;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  position: absolute;
+    bottom:120px;
+    margin-left: 215px;
+}
+
+.btn:hover {
+  background-color: #00b28f;
+}
+.img{
+  width: 300px;
+  height: 150px;
+  margin-top: 10px;
+  margin-left: 100px;
+  position: absolute;
+  /* bottom:120px;
+  margin-left: 215px; */
+}

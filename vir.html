@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Titre</title>
+        <script src="script.js " defer></script>
+        <link   rel="stylesheet" type="text/CSS" href="CSS/bootstrap.min (2).css"          >
+
+        <style>
+
+          .valide {color:green;}
+          .invalide {color:red; }
+          .valide img { border: 1px solid green;}
+          .invalide img{ border: 1px solid red;}
+
+          .container {
+            display: flex;
+          }
+
+          .sidebar-data {border: 1px solid red;}
+          .content-data {border: 1px solid red;}
+        </style>
+    </head>
+
+    <body>
+      <img class="fit-picture"
+     src="jpg"
+     alt="Grapefruit slice atop a pile of other slices">
+        <form>
+          <div class="form-group">
+            <label for="formFile" class="form-label mt-4">choisir le fichier pdf</label>
+            <input class="form-control" type="file" id="formFile">
+            <button type="button" class="btn btn-primary"  onClick="def()">Submit</button>
+          </div>
+          </form>
+
+          <div class="container">
+
+            <div class="sidebar-data">
+              A
+            </div>
+            <div class="content-data">
+              B
+            </div>
+          </div>
+
+    </body>
+</html>
